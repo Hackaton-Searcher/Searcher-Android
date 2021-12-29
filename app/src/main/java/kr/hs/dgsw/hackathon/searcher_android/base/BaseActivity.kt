@@ -15,13 +15,12 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompa
     protected lateinit var mBinding: VB
     protected lateinit var mViewModel: VM
 
-    protected lateinit var viewModel: VM
+    protected abstract val viewModel: VM
 
     protected abstract fun observerViewModel()
 
     protected open fun onErrorEvent(e: Throwable) {
         e.printStackTrace()
-        Toast.makeText(this, "${e.message}", Toast.LENGTH_SHORT).show()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
