@@ -1,7 +1,6 @@
 package kr.hs.dgsw.hackathon.searcher_android.model.network
 
 import kr.hs.dgsw.hackathon.searcher_android.model.network.api.Api
-import kr.hs.dgsw.mmr.network.api.Api
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
