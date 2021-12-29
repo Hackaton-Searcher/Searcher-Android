@@ -17,28 +17,29 @@
         tools:context=".view.ChannelInfoActivity">
 
         <ImageView
+            android:id="@+id/thumbnail"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="24dp" />
 
         <TextView
+            android:id="@+id/channel_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="채널 명"
             android:layout_marginBottom="16dp"
             android:textSize="24sp" />
 
         <TextView
+            android:id="@+id/channel_sub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="구독자 수"
             android:layout_marginBottom="12dp"
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/channel_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="전체 좋아요 수"
             android:textSize="16sp" />
 
     </LinearLayout>
