@@ -1,4 +1,4 @@
-package kr.hs.dgsw.hackathon.searcher_android
+package kr.hs.dgsw.hackathon.searcher_android.view
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import kr.hs.dgsw.hackathon.searcher_android.R
 import kr.hs.dgsw.hackathon.searcher_android.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
