@@ -1,27 +1,26 @@
 package kr.hs.dgsw.hackathon.searcher_android.base
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
-import kr.hs.dgsw.hackathon.searcher_android.R
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import kr.hs.dgsw.hackathon.searcher_android.BR
+import kr.hs.dgsw.hackathon.searcher_android.R
+import kr.hs.dgsw.hackathon.searcher_android.base.BaseViewModel
 import java.lang.reflect.ParameterizedType
 import java.util.*
-import kr.hs.dgsw.hackathon.searcher_android.BR
 
 abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompatActivity() {
     protected lateinit var mBinding: VB
     protected lateinit var mViewModel: VM
 
-    protected lateinit var viewModel: VM
+    protected abstract val viewModel: VM
 
     protected abstract fun observerViewModel()
 
     protected open fun onErrorEvent(e: Throwable) {
         e.printStackTrace()
-        Toast.makeText(this, "${e.message}", Toast.LENGTH_SHORT).show()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
