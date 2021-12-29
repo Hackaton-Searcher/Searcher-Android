@@ -4,5 +4,5 @@ data class YoutuberData(
     val channelTitle : String,
     val thumbnails : String,
     val totalView : String,
-    val totalSubscribers : String,
+    val totalSubscribers : String
 )
