@@ -1,8 +1,8 @@
 package kr.hs.dgsw.hackathon.searcher_android.viewmodel.item
 
 import androidx.lifecycle.MutableLiveData
+import com.bumptech.glide.Glide
 import kr.hs.dgsw.hackathon.searcher_android.base.BaseViewModel
-import kr.hs.dgsw.hackathon.searcher_android.model.response.YoutuberData
 import kr.hs.dgsw.hackathon.searcher_android.model.response.YoutuberListData
 import kr.hs.dgsw.hackathon.searcher_android.util.SingleLiveEvent
 
