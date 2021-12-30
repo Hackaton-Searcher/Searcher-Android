@@ -5,3 +5,9 @@ data class YoutuberListData(
     val channelId : String,
     val thumbnails : String
 )
+
+data class ChannelList(
+    val channelList: List<YoutuberListData>
+)
+
+

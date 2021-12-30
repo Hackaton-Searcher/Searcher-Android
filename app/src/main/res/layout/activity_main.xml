@@ -27,18 +27,24 @@
             <EditText
                 android:id="@+id/et_search"
                 android:layout_weight="1"
-                android:maxLength="1"
+                android:text="@={vm.searchText}"
+                android:maxLines="1"
+                android:inputType="text"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:textColor="@color/light_black"
                 android:textSize="16sp"
+                android:textColorHighlight="@color/light_black"
+                android:fontFamily="@font/notosans_medium"
+                android:includeFontPadding="false"
                 android:background="@null"
                 android:hint="Youtube Channel 검색"/>
 
             <ImageView
                 android:id="@+id/btn_search"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:onClick="@{() -> vm.searchYoutuber()}"
                 android:src="@drawable/search"
                 android:layout_gravity="center"/>
 
@@ -55,6 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            tools:listitem="@layout/channel_item"
             android:layout_marginTop="30dp"
             android:layout_marginHorizontal="20dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
