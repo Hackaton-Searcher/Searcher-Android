@@ -7,7 +7,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import kr.hs.dgsw.hackathon.searcher_android.BR
 import kr.hs.dgsw.hackathon.searcher_android.R
-import kr.hs.dgsw.hackathon.searcher_android.base.BaseViewModel
 import java.lang.reflect.ParameterizedType
 import java.util.*
 
@@ -28,7 +27,7 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompa
 
         performDataBinding()
 
-        mViewModel.onErrorEvent.observe(this, { exception ->
+        this.mViewModel.onErrorEvent.observe(this, { exception ->
             onErrorEvent(exception)
         })
 
@@ -37,8 +36,8 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompa
 
     private fun performDataBinding() {
         mBinding = DataBindingUtil.setContentView(this, layoutRes())
-        mViewModel = if (::mViewModel.isInitialized) mViewModel else viewModel
-        mBinding.setVariable(BR.vm, mViewModel)
+        this.mViewModel = if (this::mViewModel.isInitialized) this.mViewModel else this.mViewModel
+        mBinding.setVariable(BR.vm, this.mViewModel)
         mBinding.lifecycleOwner = this
         mBinding.executePendingBindings()
     }

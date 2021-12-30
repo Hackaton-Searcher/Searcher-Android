@@ -10,11 +10,10 @@ import kr.hs.dgsw.hackathon.searcher_android.model.response.ChannelList
 import kr.hs.dgsw.hackathon.searcher_android.viewmodel.MainViewModel
 
 class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
-
     override val viewModel: MainViewModel by viewModels()
 
     override fun observerViewModel() {
-        with(mViewModel) {
+        with(viewModel) {
             val adapter = YoutubeAdapter(this@MainActivity)
             youtuberList.observe(this@MainActivity) {
                 val list = mutableListOf<ChannelList>()
